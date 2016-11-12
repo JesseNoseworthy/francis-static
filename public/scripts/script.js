@@ -1,6 +1,6 @@
 'use strict';
 
-console.log('working');
+console.log('Developed by Jesse Noseworthy. You can find me online at JesseNoseworthy.com');
 
 var heroSlide = function heroSlide() {
   $('.continue').on('click', function () {
@@ -19,8 +19,9 @@ var flickityDotNames = function flickityDotNames() {
 
 var flickity = function flickity() {
   $('.content-wrapper').flickity({
-    carouselCell: 'anchor',
-    contain: true
+    prevNextButtons: false,
+    cellAlign: 'left',
+    percentPosition: false
   });
   flickityDotNames();
 };

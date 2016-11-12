@@ -1,4 +1,4 @@
-console.log('working');
+console.log('Developed by Jesse Noseworthy. You can find me online at JesseNoseworthy.com');
 
 const heroSlide = function() {
   $('.continue').on('click', function () {
@@ -17,8 +17,9 @@ const flickityDotNames = function() {
 
 const flickity = function() {
   $('.content-wrapper').flickity({
-    carouselCell: 'anchor',
-    contain: true
+    prevNextButtons: false,
+    cellAlign: 'left',
+    percentPosition: false,
   });
   flickityDotNames();
 };
