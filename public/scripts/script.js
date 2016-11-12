@@ -5,13 +5,12 @@ console.log('working');
 var heroSlide = function heroSlide() {
   $('.continue').on('click', function () {
     $(".hero").slideUp(1250);
+    $(".content-wrapper").addClass('show');
   });
 };
 
 var makeContentActive = function makeContentActive() {
-  if ($('.sidebar-link-home').hasClass('active')) {
-    $('.home').addClass('active');
-  } else if ($('.sidebar-link-about').hasClass('active')) {
+  if ($('.sidebar-link-about').hasClass('active')) {
     $('.about').addClass('active');
   } else if ($('.sidebar-link-resume').hasClass('active')) {
     $('.resume').addClass('active');

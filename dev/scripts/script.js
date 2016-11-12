@@ -3,13 +3,12 @@ console.log('working');
 const heroSlide = function() {
   $('.continue').on('click', function () {
       $(".hero").slideUp(1250);
+      $(".content-wrapper").addClass('show');
   })
 }
 
 const makeContentActive = function() {
-  if ($('.sidebar-link-home').hasClass('active')) {
-    $('.home').addClass('active');
-  } else if ($('.sidebar-link-about').hasClass('active')) {
+  if ($('.sidebar-link-about').hasClass('active')) {
     $('.about').addClass('active');
   } else if ($('.sidebar-link-resume').hasClass('active')) {
     $('.resume').addClass('active');
