@@ -9,6 +9,19 @@ var heroSlide = function heroSlide() {
   });
 };
 
+var flickity = function flickity() {
+  $('.content-wrapper').flickity({
+    carouselCell: 'anchor',
+    contain: true
+  });
+
+  $(".dot").each(function () {
+    $('.dot:first-child').html('about');
+    $('.dot:nth-child(2)').html('resume');
+    $('.dot:last-child').html('projects');
+  });
+};
+
 var makeContentActive = function makeContentActive() {
   if ($('.sidebar-link-about').hasClass('active')) {
     $('.about').addClass('active');
@@ -32,5 +45,6 @@ var makeSidebarActive = function makeSidebarActive() {
 $(document).ready(function () {
   console.log("ready!");
   heroSlide();
-  makeSidebarActive();
+  flickity();
+  // makeSidebarActive();
 });
