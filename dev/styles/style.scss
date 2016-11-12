@@ -26,12 +26,13 @@ body {
 }
 
 .sidebar {
+  padding-top: 25px;
   height: 100vh;
-  width: 275px;
+  width: 250px;
   position: fixed;
   display: flex;
   flex-direction: column;
-  border-right: 5px solid pink;
+  box-shadow: 1px 0px 5px rgba(0, 0, 0, 0.5);
 
   a,
   h1 {
@@ -40,10 +41,23 @@ body {
     color: $blue;
     font-weight: 400;
   }
+
+  a {
+    font-size: 20px;
+
+    &:hover {
+      color: green;
+    }
+  }
+
+  h1 {
+    font-size: 32px;
+  }
 }
 
 .content-wrapper {
-  margin-left: 275px;
+  margin-left: 250px;
+  padding-left: 20px;
 }
 
 .hero,
