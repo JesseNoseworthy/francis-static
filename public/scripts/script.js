@@ -7,5 +7,5 @@ console.log('working');
 // })
 
 $('.continue').on('click', function () {
-  $(".hero").slideUp(1500);
+  $(".hero").slideUp(1250);
 });
