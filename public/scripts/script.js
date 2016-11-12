@@ -11,9 +11,9 @@ var heroSlide = function heroSlide() {
 
 var flickityDotNames = function flickityDotNames() {
   $(".dot").each(function () {
-    $('.dot:first-child').html('about');
-    $('.dot:nth-child(2)').html('resume');
-    $('.dot:last-child').html('projects');
+    $('.dot:first-child').html('Resume');
+    $('.dot:nth-child(2)').html('Projects/Programs');
+    $('.dot:last-child').html('References');
   });
 };
 
