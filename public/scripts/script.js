@@ -20,12 +20,13 @@ var flickityDotNames = function flickityDotNames() {
 };
 
 var flickity = function flickity() {
-  $('.content-wrapper').flickity({
+  $('.image-break').flickity({
     prevNextButtons: false,
+    wrapAround: true,
     cellAlign: 'left',
     percentPosition: false
   });
-  flickityDotNames();
+  // flickityDotNames();
 };
 
 var smoothScroll = function smoothScroll() {
@@ -76,5 +77,5 @@ $(document).ready(function () {
   showCurrentSection();
   showNavBar();
   // heroSlide();
-  // flickity();
+  flickity();
 });
