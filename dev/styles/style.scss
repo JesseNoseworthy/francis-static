@@ -59,6 +59,7 @@ body {
       a {
         text-decoration: none;
         color: $black;
+        transition: color 0.15s ease;
 
         &.selected {
           color: red;
@@ -88,15 +89,14 @@ body {
 }
 
 .download {
-  padding: 10px 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #297eb7;
-  display: inline;
-  text-transform: lowercase;
-  border-radius: 10px;
-  box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+  padding: 0;
+  dt {
+    font-weight: bold;
+  }
+  dd {
+    padding: 10px 0;
+    margin: 0;
+  }
   a {
     text-decoration: none;
     color: $black;
