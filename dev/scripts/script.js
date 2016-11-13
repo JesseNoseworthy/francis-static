@@ -37,29 +37,16 @@ const smoothScroll = function() {
 }
 
 const showCurrentSection = function() {
-  // Storing each class in a variable
-  const sections = $('.section'),
-      links = $('.scroll-link');
-      // Now we target the window
+  const sections = $('.section'), links = $('.scroll-link');
   $(window).scroll(function() {
     "use strict";
-    // Where we are on the screen
-    var currentPosition = $(this).scrollTop();
-    // Failsafe
+    const currentPosition = $(this).scrollTop();
     links.removeClass('selected');
-    // Loop through
     sections.each(function() {
-      // Accounting for the fixed header
-        var top = $(this).offset().top - 120,
-        // Height of the sfreen
-            bottom = top + $(this).height();
-        // If the current position is greater or equal to the top and 
-        // is less than or eqaul to the bottom
-        if (currentPosition >= top && currentPosition <= bottom) {
-          // The current item we're on will take on the class of 
-          // '.selected', which will change the color
-            $('a[href="#' + this.id + '"]').addClass('selected');
-        }
+      const top = $(this).offset().top - 120, bottom = top + $(this).height(); 
+      if (currentPosition >= top && currentPosition <= bottom) {
+        $('a[href="#' + this.id + '"]').addClass('selected');
+      }
     }); 
   });
 }
