@@ -73,6 +73,10 @@ body {
   width: 100%;
   padding: 20px 50px;
   margin-top: 10px;
+
+  p {
+    padding: 20px 0; 
+  }
 }
 
 .resume {
@@ -80,20 +84,18 @@ body {
 }
 
 .download {
-  margin: 20px 0;
-  padding: 15px;
+  padding: 10px 15px;
   display: flex;
   justify-content: center;
   align-items: center;
   background: #297eb7;
-  width: 200px;
+  display: inline;
   text-transform: lowercase;
-  border-radius: 15px;
+  border-radius: 10px;
   box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
   a {
     text-decoration: none;
-    color: $gray;
-    font-weight: 300;
+    color: $black;
   }
 }
 

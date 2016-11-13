@@ -46,7 +46,7 @@ var showNavBar = function showNavBar() {
     // the window scroll
     var y = $(this).scrollTop();
     // This value is equivalent to -100 of the #about section
-    var z = $('#resume').offset().top - 100;
+    var z = $('#resume').offset().top - 130;
     // If the scroll is greater than or equal to -100 of #about
     if (y >= z) {
       // We will remove the .hide-nav class (which pushes a set amount
