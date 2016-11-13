@@ -10,7 +10,6 @@ $headerFont: 'Tahoma', sans-serif;
 
 
 body {
-  // background: red;
   font-family: $bodyFont;
   color: $black;
   letter-spacing: 0.075em;
@@ -26,10 +25,42 @@ body {
 }
 
 .content-wrapper {
-  height: 100vh;
-  display: none;
-  &.show {
+  padding: 0px 50px 0 50px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  height: 100px;
+  background: $blue;
+  padding: 0 100px;
+  position: fixed;
+  transition: all 0.75s ease;
+
+  &.hide-nav {
+    top: -100px;
+  }
+
+  &.show-nav {
+    top: 0;
+  }
+
+  .nav-items {
     display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style-type: none;
+    
+    li {
+      padding: 0 10px;
+
+      a {
+        text-decoration: none;
+        color: $black;
+      }
+    }
   }
 }
 
@@ -39,9 +70,31 @@ body {
 .media,
 .contact {
   display: block; 
-  height: 100vh;
   width: 100%;
   padding: 20px 50px;
+  margin-top: 10px;
+}
+
+.resume {
+  margin-top: 120px;
+}
+
+.download {
+  margin: 20px 0;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #297eb7;
+  width: 200px;
+  text-transform: lowercase;
+  border-radius: 15px;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+  a {
+    text-decoration: none;
+    color: $gray;
+    font-weight: 300;
+  }
 }
 
 .flickity-viewport {
@@ -57,7 +110,7 @@ body {
   display: flex;
   flex-direction: column;
   box-shadow: 1px 0px 5px rgba(0, 0, 0, 0.5);
-  background: pink;
+  background: $blue;
   z-index: 1;
 
   &:before {
@@ -82,6 +135,7 @@ body {
     color: $blue;
     font-weight: 400;
     font-size: 25px;
+    color: $gray;
 
     &.is-selected {
       color: red;
@@ -102,6 +156,7 @@ body {
   .hero-text,
   .continue {
     color: white;
+    text-decoration: none;
   }
   .hero-text {
     margin-bottom: 200px;
