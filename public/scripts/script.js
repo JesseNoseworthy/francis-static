@@ -78,4 +78,10 @@ $(document).ready(function () {
   showNavBar();
   // heroSlide();
   flickity();
+
+  $('#video').css({ height: $(window).innerHeight() - 100 + 'px' });
+
+  $('.media').resize(function () {
+    $('#video').css({ width: $('.media').innerWidth() + 'px', height: $('.media').innerHeight() + 'px' });
+  });
 });
