@@ -2,31 +2,12 @@
 
 console.log('Developed by Jesse Noseworthy. You can find me online at JesseNoseworthy.com');
 
-var heroSlide = function heroSlide() {
-  $('.continue').on('click', function () {
-    $(".hero").slideUp(1250);
-    $(".content-wrapper").addClass('show');
-  });
-};
-
-var flickityDotNames = function flickityDotNames() {
-  $(".dot").each(function () {
-    $('.dot:first-child').html('Resume');
-    $('.dot:nth-child(2)').html('Projects');
-    $('.dot:nth-child(3)').html('References');
-    $('.dot:nth-child(4)').html('Media');
-    $('.dot:last-child').html('Contact');
-  });
-};
-
 var flickity = function flickity() {
   $('.image-break').flickity({
-    prevNextButtons: false,
     wrapAround: true,
-    cellAlign: 'left',
-    percentPosition: false
+    pageDots: false,
+    imagesLoaded: true
   });
-  // flickityDotNames();
 };
 
 var smoothScroll = function smoothScroll() {
@@ -71,17 +52,19 @@ var showNavBar = function showNavBar() {
   });
 };
 
+var videoSize = function videoSize() {
+  $('#video').css({ height: $(window).innerHeight() - 100 + 'px' });
+
+  $('#video').resize(function () {
+    $('#video').css({ height: $(window).innerHeight() - 100 + 'px' });
+  });
+};
+
 $(document).ready(function () {
   console.log("ready!");
   smoothScroll();
   showCurrentSection();
   showNavBar();
-  // heroSlide();
   flickity();
-
-  $('#video').css({ height: $(window).innerHeight() - 100 + 'px' });
-
-  $('.media').resize(function () {
-    $('#video').css({ width: $('.media').innerWidth() + 'px', height: $('.media').innerHeight() + 'px' });
-  });
+  videoSize();
 });
