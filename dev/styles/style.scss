@@ -99,7 +99,13 @@ body {
 .media,
 .contact {
   width: 100%;
-  padding: 30px 225px 20px 225px;
+  @media (min-width: 1024px) {
+    padding: 30px 225px 20px 225px;
+  }
+  @media (max-width: 1023px) {
+    padding: 30px 100px 20px 100px;
+  }
+
   background: url('../assets/pattern-bg.png');
 
   h1 {
@@ -107,14 +113,22 @@ body {
   }
   .content {
     display: flex;
+    @media (max-width: 1023px) {
+      flex-direction: column;
+      .content-text,
+      .content-download {
+        width: 100%;
+      }
+    }
     .content-text,
     .content-download {
       margin: 20px 0px;
-      width: 50%;
-    }
-
-    .content-download {
-      padding-left: 50px;
+      @media (min-width: 1024px) {
+        width: 50%;
+        .content-download {
+          padding-left: 50px;
+        }
+      }
     }
   }
 }
