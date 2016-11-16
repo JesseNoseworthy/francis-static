@@ -25,7 +25,8 @@ body {
   }
 
   p,
-  a {
+  a,
+  li {
     line-height: 1.5;
     font-weight: 300;
   }
@@ -161,6 +162,17 @@ body {
     img {
       height: 400px;
       width: auto;
+    }
+  }
+}
+
+.resume {
+  .award-list {
+    padding-left: 15px;
+    // list-style-type: none;
+
+    li {
+      padding: 5px 0;
     }
   }
 }
