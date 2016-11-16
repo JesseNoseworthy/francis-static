@@ -98,6 +98,9 @@ body {
 .projects,
 .media,
 .contact {
+  h2 {
+    padding: 20px 0;
+  }
   width: 100%;
   @media (min-width: 1024px) {
     padding: 30px 225px 20px 225px;
@@ -137,10 +140,6 @@ body {
 }
 
 .media {
-  h2 {
-    padding: 15px 0;
-  }
-
   #video {
     width: 100%;
     margin: 10px 0;
